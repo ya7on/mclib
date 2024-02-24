@@ -39,12 +39,12 @@ pub struct ChunkDataAndUpdateLight {
 
 #[cfg(test)]
 mod tests {
-    use crate::chunk_format::ChunkData;
     use crate::chunk_format::data_array::DataArray;
     use crate::chunk_format::palleted_container::PalletedContainer;
     use crate::chunk_format::section::ChunkSection;
+    use crate::chunk_format::ChunkData;
+    use crate::nbt::IntoNBTTag;
     use crate::nbt::NBT;
-    use crate::nbt::tags::base::IntoNBTTag;
     use crate::packets::base::MCPacket;
     use crate::packets::client::chunk_data_and_update_light::ChunkDataAndUpdateLight;
     use crate::types::bitset::MCBitSet;
@@ -54,7 +54,7 @@ mod tests {
     #[test]
     fn test_chunk_data() {
         let reference =
-            include_bytes!("../../../../tests/references/chunk_data_and_update_light.packet");
+            include_bytes!("../../../tests/references/chunk_data_and_update_light.packet");
 
         let heightmap = NBT(
             None,

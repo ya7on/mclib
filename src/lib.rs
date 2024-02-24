@@ -71,91 +71,13 @@
 //! ```
 //! For more information about NBT tags [their pages](nbt)
 
+pub mod chunk_format;
+pub mod nbt;
+pub mod packets;
+pub mod types;
+pub mod utils;
+
+pub use crate::packets::base::MCPacket;
+pub use crate::types::base::MCType;
 pub use mclib_macros::MCPacket;
 pub use mclib_macros::MCType;
-pub use mclib_protocol::packets::base::MCPacket;
-pub use mclib_protocol::types::base::MCType;
-
-pub mod packets {
-    //! Minecraft protocol packets
-    pub mod server {
-        //! Packets that bound to server (from client to server)
-        pub use mclib_protocol::packets::server::finish_configuration::FinishConfigurationServerbound;
-        pub use mclib_protocol::packets::server::handshake::{Handshake, HandshakeNextState};
-        pub use mclib_protocol::packets::server::keepalive::ServerboundKeelAlivePlay;
-        pub use mclib_protocol::packets::server::login_acknowledged::LoginAcknowledged;
-        pub use mclib_protocol::packets::server::login_start::LoginStart;
-        pub use mclib_protocol::packets::server::ping::PingRequest;
-        pub use mclib_protocol::packets::server::set_player_position::SetPlayerPosition;
-        pub use mclib_protocol::packets::server::status_request::StatusRequest;
-    }
-    pub mod client {
-        //! Packets that bound to client (from server to client)
-        pub use mclib_protocol::packets::client::chunk_data_and_update_light::ChunkDataAndUpdateLight;
-        pub use mclib_protocol::packets::client::finish_configuration::FinishConfigurationClientbound;
-        pub use mclib_protocol::packets::client::keepalive::ClientboundKeelAlivePlay;
-        pub use mclib_protocol::packets::client::login_success::{
-            LoginSuccess, LoginSuccessProperty,
-        };
-        pub use mclib_protocol::packets::client::play::{DeathInfo, Play};
-        pub use mclib_protocol::packets::client::registry_data::RegistryData;
-        pub use mclib_protocol::packets::client::set_default_spawn_position::SetDefaultSpawnPosition;
-        pub use mclib_protocol::packets::client::status_response::StatusResponse;
-        pub use mclib_protocol::packets::client::synchronize_player_position::SynchronizePlayerPosition;
-    }
-}
-pub mod types {
-    //! Minecraft data types
-    pub use mclib_protocol::types::bitset::MCBitSet;
-    pub use mclib_protocol::types::boolean::MCBoolean;
-    pub use mclib_protocol::types::byte::MCByte;
-    pub use mclib_protocol::types::byte_array::MCByteArray;
-    pub use mclib_protocol::types::double::MCDouble;
-    pub use mclib_protocol::types::float::MCFloat;
-    pub use mclib_protocol::types::int::MCInt;
-    pub use mclib_protocol::types::long::MCLong;
-    pub use mclib_protocol::types::nbt::MCNBT;
-    pub use mclib_protocol::types::position::MCPosition;
-    pub use mclib_protocol::types::short::MCShort;
-    pub use mclib_protocol::types::string::MCString;
-    pub use mclib_protocol::types::ubyte::MCUByte;
-    pub use mclib_protocol::types::ushort::MCUShort;
-    pub use mclib_protocol::types::uuid::MCUuid;
-    pub use mclib_protocol::types::varint::MCVarInt;
-}
-pub mod nbt {
-    //! Named Binary Tag (NBT) protocol
-    //!
-    //! [More information](https://wiki.vg/NBT)
-    pub use mclib_protocol::nbt::tags::base::{IntoNBTTag, NBTTag};
-    /// TAG_Byte
-    pub use mclib_protocol::nbt::tags::byte::TagByte;
-    /// TAG_Byte_Array
-    pub use mclib_protocol::nbt::tags::byte_array::TagByteArray;
-    /// TAG_Compound (any non root)
-    pub use mclib_protocol::nbt::tags::compound::TagCompound;
-    /// TAG_Double
-    pub use mclib_protocol::nbt::tags::double::TagDouble;
-    /// TAG_Float
-    pub use mclib_protocol::nbt::tags::float::TagFloat;
-    /// TAG_Int
-    pub use mclib_protocol::nbt::tags::int::TagInt;
-    /// TAG_List
-    pub use mclib_protocol::nbt::tags::list::TagList;
-    /// TAG_Long
-    pub use mclib_protocol::nbt::tags::long::TagLong;
-    /// TAG_Long_Array
-    pub use mclib_protocol::nbt::tags::long_array::TagLongArray;
-    /// TAG_Short
-    pub use mclib_protocol::nbt::tags::short::TagShort;
-    /// TAG_String
-    pub use mclib_protocol::nbt::tags::string::TagString;
-    /// Parent NBT tag (Root TAG_Compound)
-    pub use mclib_protocol::nbt::NBT;
-}
-pub mod chunk_format {
-    pub use mclib_protocol::chunk_format::{
-        data_array::DataArray, palleted_container::PalletedContainer, section::ChunkSection,
-        ChunkData,
-    };
-}
