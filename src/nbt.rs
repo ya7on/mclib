@@ -1,9 +1,38 @@
-use crate::nbt::tags::base::{unpack_by_ty_id, NBTTag};
+//! Named Binary Tag (NBT) protocol
+//!
+//! [More information](https://wiki.vg/NBT)
+
+use crate::nbt::tags::base::unpack_by_ty_id;
 use crate::utils::TcpUtils;
 use std::io::Read;
 
-pub mod tags;
+pub(crate) mod tags;
 
+pub use tags::base::{IntoNBTTag, NBTTag};
+/// TAG_Byte
+pub use tags::byte::TagByte;
+/// TAG_Byte_Array
+pub use tags::byte_array::TagByteArray;
+/// TAG_Compound (any non root)
+pub use tags::compound::TagCompound;
+/// TAG_Double
+pub use tags::double::TagDouble;
+/// TAG_Float
+pub use tags::float::TagFloat;
+/// TAG_Int
+pub use tags::int::TagInt;
+/// TAG_List
+pub use tags::list::TagList;
+/// TAG_Long
+pub use tags::long::TagLong;
+/// TAG_Long_Array
+pub use tags::long_array::TagLongArray;
+/// TAG_Short
+pub use tags::short::TagShort;
+/// TAG_String
+pub use tags::string::TagString;
+
+/// Parent NBT tag (Root TAG_Compound)
 #[derive(Debug)]
 pub struct NBT(pub Option<String>, pub Box<dyn NBTTag>);
 

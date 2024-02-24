@@ -1,11 +1,14 @@
-use crate::chunk_format::section::ChunkSection;
 use crate::types::base::MCType;
 use crate::utils::TcpUtils;
 use std::io::Read;
 
-pub mod data_array;
-pub mod palleted_container;
-pub mod section;
+pub(crate) mod data_array;
+pub(crate) mod palleted_container;
+pub(crate) mod section;
+
+pub use data_array::DataArray;
+pub use palleted_container::PalletedContainer;
+pub use section::ChunkSection;
 
 #[derive(Debug, Clone)]
 pub struct ChunkData(pub Vec<ChunkSection>);

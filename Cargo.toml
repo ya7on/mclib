@@ -9,18 +9,8 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[workspace]
-members = ["macros", "protocol"]
-
-[workspace.dependencies]
-mclib-macros = { path = "macros", version = "0.0.1" }
-mclib-protocol = { path = "protocol", version = "0.0.1" }
-
-darling = { version = "0.20.3" }
-flate2 = { version = "1.0.28" }
-syn = { version = "2.0.39" }
-uuid = { version = "1.5.0", features = ["v4", "fast-rng", "macro-diagnostics"] }
-
 [dependencies]
-mclib-macros = { workspace = true }
-mclib-protocol = { workspace = true }
+mclib-macros = { path = "macros", version = "0.0.1" }
+
+flate2 = { version = "1.0.28" }
+uuid = { version = "1.5.0", features = ["v4", "fast-rng", "macro-diagnostics"] }

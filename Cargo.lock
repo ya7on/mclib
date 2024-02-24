@@ -101,8 +101,9 @@ checksum = "9c198f91728a82281a64e1f4f9eeb25d82cb32a5de251c6bd1b5154d63a8e7bd"
 name = "mclib"
 version = "0.0.1"
 dependencies = [
+ "flate2",
  "mclib-macros",
- "mclib-protocol",
+ "uuid",
 ]
 
 [[package]]
@@ -111,15 +112,6 @@ version = "0.0.1"
 dependencies = [
  "darling",
  "syn",
-]
-
-[[package]]
-name = "mclib-protocol"
-version = "0.0.1"
-dependencies = [
- "flate2",
- "mclib-macros",
- "uuid",
 ]
 
 [[package]]
