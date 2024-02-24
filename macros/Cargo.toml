@@ -1,6 +1,8 @@
 [package]
 name = "mclib-macros"
-version = "0.1.0"
+version = "0.0.1"
+license = "Apache-2.0"
+description = "Proc-macro for mclib"
 edition = "2021"
 
 [lib]

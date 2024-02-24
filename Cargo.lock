@@ -107,7 +107,7 @@ dependencies = [
 
 [[package]]
 name = "mclib-macros"
-version = "0.1.0"
+version = "0.0.1"
 dependencies = [
  "darling",
  "syn",
@@ -115,7 +115,7 @@ dependencies = [
 
 [[package]]
 name = "mclib-protocol"
-version = "0.1.0"
+version = "0.0.1"
 dependencies = [
  "flate2",
  "mclib-macros",

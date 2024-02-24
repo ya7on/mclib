@@ -13,8 +13,8 @@ edition = "2021"
 members = ["macros", "protocol"]
 
 [workspace.dependencies]
-mclib-macros = { path = "macros" }
-mclib-protocol = { path = "protocol" }
+mclib-macros = { path = "macros", version = "0.0.1" }
+mclib-protocol = { path = "protocol", version = "0.0.1" }
 
 darling = { version = "0.20.3" }
 flate2 = { version = "1.0.28" }
