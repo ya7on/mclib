@@ -1,4 +1,5 @@
 use crate::packets::base::MCPacket;
+use crate::packets::packet_ids::current_version;
 use crate::types::base::MCType;
 use crate::types::{MCString, MCUShort, MCVarInt};
 use mclib_macros::MCPacket;
@@ -21,7 +22,7 @@ impl From<i32> for HandshakeNextState {
 }
 
 #[derive(MCPacket, Debug, Clone)]
-#[packet(packet_id = 0x00)]
+#[packet(packet_id = current_version::handshaking::server::HANDSHAKE)]
 pub struct Handshake {
     pub protocol_version: MCVarInt,
     pub server_address: MCString,

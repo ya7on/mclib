@@ -47,10 +47,10 @@ pub fn derive_type(input: TokenStream) -> TokenStream {
     expanded.into()
 }
 
-#[derive(FromDeriveInput, Default)]
+#[derive(FromDeriveInput)]
 #[darling(attributes(packet))]
 struct Opts {
-    packet_id: i32,
+    packet_id: syn::Expr,
 }
 
 #[proc_macro_derive(MCPacket, attributes(packet))]

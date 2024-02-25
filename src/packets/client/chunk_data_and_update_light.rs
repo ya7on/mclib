@@ -4,6 +4,7 @@ use mclib_macros::{MCPacket, MCType};
 
 use crate::chunk_format::ChunkData;
 use crate::packets::base::MCPacket;
+use crate::packets::packet_ids::current_version;
 use crate::types::base::MCType;
 use crate::types::{MCBitSet, MCByte, MCByteArray, MCInt, MCShort, MCVarInt, MCNBT};
 
@@ -16,7 +17,7 @@ pub struct BlockEntity {
 }
 
 #[derive(MCPacket, Debug, Clone)]
-#[packet(packet_id = 0x25)]
+#[packet(packet_id = current_version::play::client::CHUNK_DATA_AND_UPDATE_LIGHT)]
 pub struct ChunkDataAndUpdateLight {
     pub chunk_x: MCInt,
     pub chunk_z: MCInt,
