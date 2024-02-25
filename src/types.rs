@@ -1,5 +1,6 @@
 //! Minecraft data types
 
+mod angle;
 pub(crate) mod base;
 mod bitset;
 mod boolean;
@@ -20,6 +21,7 @@ mod uuid;
 mod varint;
 mod vec;
 
+pub use angle::MCAngle;
 pub use bitset::MCBitSet;
 pub use boolean::MCBoolean;
 pub use byte::MCByte;
