@@ -1,24 +1,24 @@
 //! Minecraft data types
 
 pub(crate) mod base;
-pub(crate) mod bitset;
-pub(crate) mod boolean;
-pub(crate) mod byte;
-pub(crate) mod byte_array;
-pub(crate) mod double;
-pub(crate) mod float;
-pub(crate) mod int;
-pub(crate) mod long;
-pub(crate) mod nbt;
-pub(crate) mod option;
-pub(crate) mod position;
-pub(crate) mod short;
-pub(crate) mod string;
-pub(crate) mod ubyte;
-pub(crate) mod ushort;
-pub(crate) mod uuid;
-pub(crate) mod varint;
-pub(crate) mod vec;
+mod bitset;
+mod boolean;
+mod byte;
+mod byte_array;
+mod double;
+mod float;
+mod int;
+mod long;
+mod nbt;
+mod option;
+mod position;
+mod short;
+mod string;
+mod ubyte;
+mod ushort;
+mod uuid;
+mod varint;
+mod vec;
 
 pub use bitset::MCBitSet;
 pub use boolean::MCBoolean;

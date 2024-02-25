@@ -5,13 +5,7 @@ use mclib_macros::{MCPacket, MCType};
 use crate::chunk_format::ChunkData;
 use crate::packets::base::MCPacket;
 use crate::types::base::MCType;
-use crate::types::bitset::MCBitSet;
-use crate::types::byte::MCByte;
-use crate::types::byte_array::MCByteArray;
-use crate::types::int::MCInt;
-use crate::types::nbt::MCNBT;
-use crate::types::short::MCShort;
-use crate::types::varint::MCVarInt;
+use crate::types::{MCBitSet, MCByte, MCByteArray, MCInt, MCShort, MCVarInt, MCNBT};
 
 #[derive(MCType, Debug, Clone)]
 pub struct BlockEntity {
@@ -47,9 +41,7 @@ mod tests {
     use crate::nbt::NBT;
     use crate::packets::base::MCPacket;
     use crate::packets::client::chunk_data_and_update_light::ChunkDataAndUpdateLight;
-    use crate::types::bitset::MCBitSet;
-    use crate::types::byte_array::MCByteArray;
-    use crate::types::long::MCLong;
+    use crate::types::{MCBitSet, MCByteArray, MCLong};
 
     #[test]
     fn test_chunk_data() {
