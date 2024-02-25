@@ -1,7 +1,5 @@
 use crate::types::base::MCType;
-use crate::types::long::MCLong;
-use crate::types::ubyte::MCUByte;
-use crate::types::varint::MCVarInt;
+use crate::types::{MCLong, MCUByte, MCVarInt};
 use std::io::Read;
 
 #[derive(Debug, Clone)]

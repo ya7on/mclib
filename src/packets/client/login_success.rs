@@ -1,8 +1,6 @@
 use crate::packets::base::MCPacket;
 use crate::types::base::MCType;
-use crate::types::string::MCString;
-use crate::types::uuid::MCUuid;
-use crate::types::varint::MCVarInt;
+use crate::types::{MCString, MCUuid, MCVarInt};
 use mclib_macros::{MCPacket, MCType};
 use std::io::Read;
 

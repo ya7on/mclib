@@ -1,6 +1,6 @@
 use crate::chunk_format::palleted_container::PalletedContainer;
 use crate::types::base::MCType;
-use crate::types::short::MCShort;
+use crate::types::MCShort;
 use mclib_macros::MCType;
 use std::io::Read;
 

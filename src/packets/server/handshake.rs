@@ -1,8 +1,6 @@
 use crate::packets::base::MCPacket;
 use crate::types::base::MCType;
-use crate::types::string::MCString;
-use crate::types::ushort::MCUShort;
-use crate::types::varint::MCVarInt;
+use crate::types::{MCString, MCUShort, MCVarInt};
 use mclib_macros::MCPacket;
 
 #[derive(Debug, Clone)]

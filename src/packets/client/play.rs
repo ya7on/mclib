@@ -1,13 +1,6 @@
 use crate::packets::base::MCPacket;
 use crate::types::base::MCType;
-use crate::types::boolean::MCBoolean;
-use crate::types::byte::MCByte;
-use crate::types::int::MCInt;
-use crate::types::long::MCLong;
-use crate::types::position::MCPosition;
-use crate::types::string::MCString;
-use crate::types::ubyte::MCUByte;
-use crate::types::varint::MCVarInt;
+use crate::types::{MCBoolean, MCByte, MCInt, MCLong, MCPosition, MCString, MCUByte, MCVarInt};
 use mclib_macros::{MCPacket, MCType};
 use std::io::Read;
 
