@@ -1,6 +1,6 @@
 //! Minecraft Java Edition protocol helpers
 //!
-//! Current version of crate supports __763__ protocol version, Minecraft version __1.20.2__
+//! Current version of crate supports __765__ protocol version, Minecraft version __1.20.4__
 //!
 //! # Examples
 //!
