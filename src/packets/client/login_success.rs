@@ -1,4 +1,5 @@
 use crate::packets::base::MCPacket;
+use crate::packets::packet_ids::current_version;
 use crate::types::base::MCType;
 use crate::types::{MCString, MCUuid, MCVarInt};
 use mclib_macros::{MCPacket, MCType};
@@ -12,7 +13,7 @@ pub struct LoginSuccessProperty {
 }
 
 #[derive(MCPacket, Debug, Clone)]
-#[packet(packet_id = 0x02)]
+#[packet(packet_id = current_version::login::client::LOGIN_SUCCESS)]
 pub struct LoginSuccess {
     pub uuid: MCUuid,
     pub username: MCString,
