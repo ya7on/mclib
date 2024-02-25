@@ -18,6 +18,12 @@ impl From<MCUuid> for Uuid {
     }
 }
 
+impl From<u128> for MCUuid {
+    fn from(value: u128) -> Self {
+        Self(Uuid::from_u128(value))
+    }
+}
+
 impl PartialEq<Uuid> for MCUuid {
     fn eq(&self, other: &Uuid) -> bool {
         &self.0 == other
