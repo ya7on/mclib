@@ -12,6 +12,7 @@ mod spawn_entity;
 mod status_response;
 mod synchronize_player_position;
 mod teleport_entity;
+mod update_entity_position;
 
 pub use chunk_data_and_update_light::{BlockEntity, ChunkDataAndUpdateLight};
 pub use finish_configuration::FinishConfigurationClientbound;
@@ -25,3 +26,4 @@ pub use spawn_entity::{EntityType, SpawnEntity};
 pub use status_response::StatusResponse;
 pub use synchronize_player_position::SynchronizePlayerPosition;
 pub use teleport_entity::TeleportEntity;
+pub use update_entity_position::UpdateEntityPosition;
