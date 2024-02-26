@@ -33,6 +33,7 @@ mod version_1_20_4 {
     }
     pub mod play {
         pub mod client {
+            pub const SPAWN_ENTITY: i32 = 0x01;
             pub const KEEP_ALIVE: i32 = 0x24;
             pub const CHUNK_DATA_AND_UPDATE_LIGHT: i32 = 0x25;
             pub const PLAY: i32 = 0x29;
